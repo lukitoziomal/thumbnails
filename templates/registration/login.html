@@ -1,0 +1,11 @@
+
+{% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+<form method="POST" class="form-group">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Log In</button>
+</form>
+
